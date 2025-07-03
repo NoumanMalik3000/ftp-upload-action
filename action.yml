@@ -1,0 +1,32 @@
+name: 'FTP Upload Action'
+description: 'Uploads files to FTP server or FTPS'
+author: 'Nouman Malik'
+inputs:
+  server:
+    description: 'FTP server hostname or IP'
+    required: true
+  username:
+    description: 'FTP username'
+    required: true
+  password:
+    description: 'FTP password'
+    required: true
+  port:
+    description: 'FTP port number (default 21)'
+    required: false
+    default: '21'
+  secure:
+    description: 'Use FTPS (true/false)'
+    required: false
+    default: 'true'
+  local_dir:
+    description: 'Local folder to upload from'
+    required: false
+    default: './'
+  server_dir:
+    description: 'Remote folder to upload to'
+    required: false
+    default: './'
+runs:
+  using: 'node18'
+  main: 'dist/index.js'

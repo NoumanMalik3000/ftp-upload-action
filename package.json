@@ -1,0 +1,39 @@
+{
+  "name": "ftp-upload-action",
+  "version": "1.0.0",
+  "description": "A GitHub Action to upload files via FTP.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoumanMalik3000/ftp-upload-action.git"
+  },
+  "keywords": [
+    "github-action",
+    "ftp",
+    "upload",
+    "ftp-upload",
+    "upload-ftp",
+    "deploy",
+    "deploy-to-ftp",
+    "deploy-to-ftp-server",
+    "ftp-server"
+  ],
+  "author": "Nouman Malik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoumanMalik3000/ftp-upload-action/issues"
+  },
+  "homepage": "https://github.com/NoumanMalik3000/ftp-upload-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "basic-ftp": "^5.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "typescript": "^5.8.3"
+  }
+}
