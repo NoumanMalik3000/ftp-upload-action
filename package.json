@@ -4,8 +4,8 @@
   "description": "A GitHub Action to upload files via FTP.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node16 --outfile=dist/index.js",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.0.10",
+    "esbuild": "^0.25.5",
     "typescript": "^5.8.3"
   }
 }
